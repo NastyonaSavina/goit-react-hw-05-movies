@@ -15,7 +15,12 @@ import {
 export const MovieInfo = ({ dataMovie }) => {
  
  const { title, release_date, poster_path, genres, overview,vote_average } = dataMovie;
-    const  imageUrl = `https://image.tmdb.org/t/p/original${poster_path}`;
+    
+    
+    const imageUrl =
+        poster_path !== null
+            ? `https://image.tmdb.org/t/p/original${poster_path}`
+       : 'https://s.studiobinder.com/wp-content/uploads/2019/06/Movie-Poster-Templates-StudioBinder.jpg';
     const  realeseYear = release_date.slice(0, 4);
     
     const dataGenres =

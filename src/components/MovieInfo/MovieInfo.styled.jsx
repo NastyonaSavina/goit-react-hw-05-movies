@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export const MovieWrapper = styled.div`
     display: flex;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    padding: 10px;
 
 `
 export const MovieImg= styled.img`
@@ -15,7 +16,7 @@ export const MovieImg= styled.img`
 export const MovieCard= styled.div`
   
     padding: 10px;
-    gap:20px;
+    
 
 `
 

@@ -20,8 +20,9 @@ export const MovieInfo = ({ dataMovie }) => {
     const imageUrl =
         poster_path !== null
             ? `https://image.tmdb.org/t/p/original${poster_path}`
-       : 'https://s.studiobinder.com/wp-content/uploads/2019/06/Movie-Poster-Templates-StudioBinder.jpg';
-    const  realeseYear = release_date.slice(0, 4);
+            : 'https://s.studiobinder.com/wp-content/uploads/2019/06/Movie-Poster-Templates-StudioBinder.jpg';
+    
+    const realeseYear = release_date.slice(0, 4);
     
     const dataGenres =
     genres.length > 0

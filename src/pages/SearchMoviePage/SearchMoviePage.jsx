@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getMovieByQuery } from '../../servises/FetchMovies';
 import { Searchbar } from '../../components/Searchbar/Searchbar';
 import { MoviesList } from '../../components/MoviesList/MoviesList';
+import Notiflix from 'notiflix';
 
 
 const SearchMoviePage = () => {
@@ -18,6 +19,7 @@ const SearchMoviePage = () => {
   useEffect(() => {
 
       if (query === null) {
+      return Notiflix.Notify.info('Enter movie name');
     } else {
       getMovieByQuery(query).then((data) => {
         setMovies(data.results);

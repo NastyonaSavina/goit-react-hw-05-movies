@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
     
     MovieWrapper,
@@ -50,4 +52,9 @@ export const MovieInfo = ({ dataMovie }) => {
       </>
      
   );
+};
+
+
+MovieInfo.propTypes = {
+  dataMovie: PropTypes.object.isRequired,
 };

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
+
 import { getMovieReviews } from '../../../servises/FetchMovies';
 
 import {
@@ -15,20 +16,19 @@ import {
 export default function ReviewsPage() {
 
     const { movieId } = useParams();
-    const [movieReviews, setMovieReviews] = useState('');
+    const [movieReviews, setMovieReviews] = useState([]);
+
 
 
     useEffect(() => {
         getMovieReviews(movieId).then(({ results }) => 
-        setMovieReviews(results)
-        )
-        
+            setMovieReviews(results))
+    
     }, [movieId]);
 
     return (
         <>
             <List>
-           
             {movieReviews.length !== 0 
                 ? movieReviews.map(review => [
                     
